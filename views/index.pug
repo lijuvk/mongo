@@ -1,0 +1,43 @@
+extends layout
+block content
+  nav
+      ul
+       li
+        a(href='/getAllHeros') ALL HEROS
+  h1= title
+  p Welcome to #{title}
+
+   
+
+  form(action='saveData' method='get')
+     .row
+       .input-field.col.s6
+         label(for='superhero').active  Super Hero
+         input#superhero.validate(type='text', name='superhero')
+     .row
+       .input-field.col.s6
+         label(for='publisher').active  Publisher
+         input#publisher.validate(type='text', name='publisher')
+     .row
+       .input-field.col.s6
+         label(for='alter_ego').active  Alter Ego
+         input#alter_ego.validate(type='text', name='alter_ego')  
+     .row
+       .input-field.col.s6
+         label(for='first_appearence').active  First Appearence
+         input#first_appearence.validate(type='text', name='age')  
+     .row
+       .input-field.col.s6
+         label(for='characters').active  Characters
+         input#characters.validate(type='text', name='characters')
+     .row
+       .input-field.col.s6
+         label(for='is_valid').active  Is Valid
+         input#is_valid.validate(type='text', name='is_valid')
+     .row
+       .input-field.col.s6
+         label(for='update_time').active  Update Time
+         input#update_time.validate(type='text', name='update_time')
+
+     .row
+         button.btn(type='submit') Go
